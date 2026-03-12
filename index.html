@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="tablica()">Wyswietlanie</button>
+    <p id="cos"></p>
+
+    <button onclick="push()">Push</button>
+
+    <button onclick="pop()">Pop</button>
+
+    <button onclick="unshift()">Unshift</button>
+
+    <button onclick="shift()">Shift</button>
+
+    <button onclick="sprawdz()">Sprawdz</button>
+
+    <button onclick="sort()">Sortju</button>
+
+    <button onclick="pos()">Pos</button>
+
+    <button onclick="count()">Policz</button>
+
+    <button onclick="pierwszadruga()">Pierwsza i Druga</button>
+
+    <button onclick="oddzelnie()">Oddzelnie</button>
+
+
+
+
+    <script>
+        let auta = ["BMW", "Audi", "Opel", "Skoda", "Mercedes"]
+
+        function tablica()
+        {
+            document.getElementById("cos").innerHTML = auta.join("<br>");
+        }
+        function push()
+        {
+            auta.push("Jakas")
+        }
+        function pop()
+        {
+            auta.pop();
+        }
+        function unshift()
+        {
+            auta.unshift("Honda")
+        }
+
+        function shift()
+        {
+            auta.shift()
+        }
+
+        function sprawdz()
+        {
+            let wynik = auta.includes("Skoda") ? "skoda jest" : "skody nie ma"
+            document.getElementById("cos").innerHTML = wynik
+        }
+
+        function sort()
+        {
+            auta.sort()
+        }
+
+        function pos()
+        {
+            document.getElementById("cos").innerHTML = auta[0]
+        }
+
+        function count()
+        {
+            document.getElementById("cos").innerHTML = auta.length
+        }
+
+        function pierwszadruga()
+        {
+            document.getElementById("cos").innerHTML = auta[0] + "<br>" + auta[1]
+        }
+
+        function oddzelnie()
+        {
+            document.getElementById("cos").innerHTML = auta.join("<br>")
+        }
+        
+    </script>
+</body>
+</html>
